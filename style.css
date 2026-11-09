@@ -1,0 +1,1289 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f5f3ed;
+  font-family: Arial, sans-serif;
+  color: #191919;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 5%;
+}
+
+.logo {
+  color: #df332c;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #191919;
+  font-size: 12px;
+}
+
+.introduzione {
+  padding: 30px 5%;
+}
+
+h1 {
+  font-size: clamp(60px, 12vw, 160px);
+  letter-spacing: -5px;
+  margin: 0 0 20px;
+}
+
+.presentazione {
+  display: flex;
+  width: 100%;
+}
+
+.testo-intro {
+  background-color: #df332c;
+  color: white;
+  width: 57%;
+  padding: 40px;
+}
+
+.testo-intro h2 {
+  font-size: 42px;
+  line-height: 1.1;
+  max-width: 350px;
+}
+
+.testo-intro p {
+  font-size: 14px;
+  max-width: 350px;
+}
+
+.presentazione img {
+  width: 43%;
+  object-fit: cover;
+}
+
+@media (max-width: 650px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .presentazione {
+    flex-direction: column;
+  }
+
+  .testo-intro,
+  .presentazione img {
+    width: 100%;
+  }
+
+  .testo-intro h2 {
+    font-size: 32px;
+  }
+}
+
+/* SEZIONE OPERE */
+
+.opere {
+  padding: 60px 5%;
+}
+
+.etichetta {
+  font-size: 11px;
+  color: #df332c;
+  letter-spacing: 1px;
+}
+
+.opere h2 {
+  font-size: 32px;
+  margin: 15px 0 30px;
+}
+
+.griglia-opere {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.copertina {
+  height: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.copertina h3 {
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.copertina span {
+  text-align: right;
+  font-size: 28px;
+}
+
+.blu {
+  background-color: #244bb0;
+  color: white;
+}
+
+.rossa {
+  background-color: #df332c;
+  color: white;
+}
+
+.gialla {
+  background-color: #f4d034;
+  color: #191919;
+}
+
+.nera {
+  background-color: #191919;
+  color: white;
+}
+
+/* ADATTAMENTO TABLET E SMARTPHONE */
+
+@media (max-width: 900px) {
+  .griglia-opere {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .griglia-opere {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* TERZA SEZIONE: BIOGRAFIA */
+
+.biografia {
+  padding: 80px 5%;
+  background-color: #f5f3ed;
+}
+
+.biografia-intro {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.biografia h2 {
+  font-size: 42px;
+  line-height: 1.1;
+  max-width: 350px;
+  margin-top: 20px;
+}
+
+.biografia-testo {
+  max-width: 600px;
+}
+
+.biografia-testo p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.biografia-date {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.data {
+  border-top: 1px solid #cccccc;
+  padding-top: 20px;
+}
+
+.data h3 {
+  color: #df332c;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.data p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* VERSIONE SMARTPHONE */
+
+@media (max-width: 700px) {
+  .biografia-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .biografia-date {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .biografia h2 {
+    font-size: 32px;
+  }
+}
+
+/* QUARTA SEZIONE: LE CITTÀ INVISIBILI */
+
+.citta-invisibili {
+  background-color: #244bb0;
+  color: white;
+  padding: 80px 5%;
+}
+
+.citta-contenuto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.citta-etichetta {
+  color: #f4d034;
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.citta-testo h2 {
+  font-size: 48px;
+  margin: 0 0 20px;
+}
+
+.citta-testo h3 {
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.citta-testo p {
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.citta-pulsante {
+  display: inline-block;
+  background-color: #f4d034;
+  color: #191919;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+.citta-immagine img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* VERSIONE SMARTPHONE */
+
+@media (max-width: 700px) {
+  .citta-contenuto {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .citta-testo h2 {
+    font-size: 36px;
+  }
+}
+
+/* QUINTA SEZIONE: I TEMI */
+
+.temi {
+  background-color: #f5f3ed;
+  padding: 80px 5%;
+}
+
+.temi h2 {
+  font-size: 38px;
+  margin: 20px 0 35px;
+}
+
+.griglia-temi {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.tema {
+  min-height: 320px;
+  padding: 30px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.tema-nero {
+  background-color: #191919;
+}
+
+.tema-blu {
+  background-color: #244bb0;
+}
+
+.tema-rosso {
+  background-color: #df332c;
+}
+
+.numero-tema {
+  font-size: 56px;
+  font-weight: 300;
+  margin-bottom: 35px;
+}
+
+.tema h3 {
+  font-size: 24px;
+  margin: 0 0 15px;
+}
+
+.tema p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* VERSIONE SMARTPHONE */
+
+@media (max-width: 700px) {
+  .griglia-temi {
+    grid-template-columns: 1fr;
+  }
+
+  .tema {
+    min-height: 250px;
+  }
+}
+
+/* SESTA SEZIONE: TRE LIBRI */
+
+.libri-consigliati {
+  background-color: #f4d034;
+  color: #191919;
+  padding: 80px 5%;
+}
+
+.libri-etichetta {
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.libri-consigliati h2 {
+  font-size: 48px;
+  margin: 0 0 20px;
+}
+
+.libri-introduzione {
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.lista-libri {
+  border-top: 1px solid #191919;
+}
+
+.libro {
+  display: grid;
+  grid-template-columns: 80px 1.5fr 2fr 40px;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.numero-libro {
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.libro-titolo p {
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin: 0 0 8px;
+}
+
+.libro-titolo h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.libro-descrizione {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.freccia {
+  font-size: 30px;
+  text-align: right;
+}
+
+/* VERSIONE SMARTPHONE */
+
+@media (max-width: 700px) {
+  .libri-consigliati h2 {
+    font-size: 32px;
+  }
+
+  .libro {
+    grid-template-columns: 50px 1fr 30px;
+    gap: 12px;
+  }
+
+  .numero-libro {
+    font-size: 32px;
+  }
+
+  .libro-descrizione {
+    grid-column: 2 / 4;
+  }
+
+  .freccia {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
+/* SETTIMA SEZIONE: APPROFONDIMENTI */
+
+.approfondimenti {
+  background-color: #f5f3ed;
+  padding: 80px 5%;
+}
+
+.approfondimenti-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 35px;
+  gap: 20px;
+}
+
+.approfondimenti h2 {
+  font-size: 38px;
+  margin: 15px 0 0;
+}
+
+.tutti-approfondimenti {
+  color: #df332c;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.griglia-approfondimenti {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.scheda-approfondimento {
+  border: 1px solid #d9d6cd;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  min-height: 270px;
+}
+
+.scheda-categoria {
+  color: #df332c;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin: 0 0 20px;
+}
+
+.scheda-approfondimento h3 {
+  font-size: 25px;
+  line-height: 1.2;
+  margin: 0 0 15px;
+}
+
+.scheda-approfondimento > p:not(.scheda-categoria) {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.scheda-approfondimento a {
+  color: #df332c;
+  font-size: 12px;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+/* VERSIONE SMARTPHONE */
+
+@media (max-width: 700px) {
+  .approfondimenti-intro {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .griglia-approfondimenti {
+    grid-template-columns: 1fr;
+  }
+
+  .approfondimenti h2 {
+    font-size: 30px;
+  }
+}
+
+/* RIFINITURA: LARGHEZZA DEL SITO */
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* FONT ORIGINALE FIGMA */
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #191b1d;
+}
+
+/* TITOLO CALVINO */
+
+.introduzione h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 206px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -14px;
+  color: #191b1d;
+  margin: 0 0 20px;
+}
+
+/* RIQUADRO ROSSO - MISURE FIGMA */
+
+.presentazione {
+  display: flex;
+  width: 100%;
+}
+
+.testo-intro {
+  background-color: #d9362e;
+  width: 740px;
+  height: 490px;
+  padding: 40px;
+  border-radius: 0;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.presentazione img {
+  width: calc(100% - 740px);
+  height: 490px;
+  object-fit: cover;
+}
+
+/* DIMENSIONI ESATTE PRIMA SEZIONE FIGMA */
+
+.presentazione {
+  display: flex;
+  width: 100%;
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+.testo-intro {
+  width: 740px;
+  height: 490px;
+  flex-shrink: 0;
+  background-color: #d9362e;
+  padding: 40px;
+}
+
+.presentazione img {
+  width: 556px;
+  height: 490px;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* ADATTAMENTO A SCHERMI PIÙ PICCOLI */
+
+@media (max-width: 1400px) {
+  .presentazione {
+    max-width: 100%;
+  }
+
+  .testo-intro {
+    width: 57.1%;
+    flex-shrink: 1;
+  }
+
+  .presentazione img {
+    width: 42.9%;
+    flex-shrink: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .presentazione {
+    flex-direction: column;
+  }
+
+  .testo-intro,
+  .presentazione img {
+    width: 100%;
+    height: auto;
+  }
+
+  .testo-intro {
+    min-height: 350px;
+  }
+
+  .introduzione h1 {
+    font-size: clamp(55px, 12vw, 100px);
+    letter-spacing: -5px;
+  }
+}
+
+/* TITOLO BIANCO DEL RIQUADRO ROSSO */
+
+.testo-intro h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 78px;
+  font-weight: 700;
+  line-height: 1.03;
+  letter-spacing: -3.5px;
+  color: #f6f4ec;
+
+  width: 100%;
+  max-width: 660px;
+  margin: 0;
+}
+
+/* TITOLO CALVINO RESPONSIVE */
+
+.introduzione h1 {
+  font-size: clamp(55px, 14.3vw, 206px);
+  line-height: 1;
+  letter-spacing: -0.068em;
+  max-width: 100%;
+}
+
+/* ADATTAMENTO TITOLO BIANCO */
+
+@media (max-width: 900px) {
+  .testo-intro h2 {
+    font-size: clamp(30px, 5vw, 78px);
+    letter-spacing: -0.045em;
+  }
+}
+
+/* INTESTAZIONE CALVINO */
+
+.titolo-principale {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.titolo-principale h1 {
+  margin: 0;
+}
+
+.info-autore {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.info-autore span:last-child {
+  color: #d9362e;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .titolo-principale {
+    flex-wrap: wrap;
+  }
+
+  .info-autore {
+    margin-bottom: 0;
+  }
+}
+
+/* ETICHETTA NEL RIQUADRO ROSSO */
+
+.etichetta-intro {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: #f6f4ec;
+  margin: 0;
+}
+
+/* POSIZIONE INFORMAZIONI AUTORE */
+
+.info-autore {
+  margin-bottom: 25px;
+}
+
+/* ALLINEAMENTO TESTI RIQUADRO ROSSO */
+
+.testo-intro {
+  justify-content: flex-start;
+}
+
+.etichetta-intro {
+  margin-bottom: 30px;
+}
+
+.testo-intro h2 {
+  margin: 0;
+}
+
+.testo-intro > p:last-child {
+  margin-top: auto;
+}
+
+/* FASCIA SOTTO LA PRESENTAZIONE */
+
+.fascia-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 25px 0;
+  border-bottom: 1px solid #191b1d;
+}
+
+.fascia-intro p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.pulsante-opere {
+  display: inline-block;
+  background-color: #d9362e;
+  color: #f6f4ec;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 14px 22px;
+  white-space: nowrap;
+}
+
+.pulsante-opere:hover {
+  background-color: #b82c25;
+}
+
+@media (max-width: 650px) {
+  .fascia-intro {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* DIMENSIONI ORIGINALI SCHEDE FIGMA */
+
+.griglia-opere {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.copertina {
+  width: 100%;
+  height: 250px;
+  padding: 22px;
+  border-radius: 0;
+}
+
+.copertina.blu {
+  background-color: #234cb2;
+}
+
+@media (max-width: 900px) {
+  .griglia-opere {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .griglia-opere {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* RIFINITURA SEZIONE OPERE */
+
+.opere {
+  padding: 72px 5.55%;
+}
+
+.intestazione-opere {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.intestazione-opere h2 {
+  font-size: 48px;
+  letter-spacing: -2px;
+  margin: 15px 0 0;
+}
+
+.intestazione-opere > p {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #777;
+}
+
+.griglia-opere {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px 22px;
+}
+
+.copertina {
+  height: 250px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.copertina-alto,
+.copertina-basso {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copertina-alto {
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.copertina h3 {
+  font-size: 27px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.copertina-basso small {
+  font-family: monospace;
+  font-size: 9px;
+}
+
+.copertina-basso span {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.descrizione-opera {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+  margin: 18px 0 12px;
+}
+
+.link-opera {
+  font-family: monospace;
+  color: #d9362e;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.nota-opere {
+  margin-top: 45px;
+  color: #777;
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .griglia-opere {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .griglia-opere {
+    grid-template-columns: 1fr;
+  }
+
+  .intestazione-opere {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .intestazione-opere h2 {
+    font-size: 32px;
+  }
+}
+
+/* CORREZIONE TESTI PICCOLI DELLE COPERTINE */
+
+.copertina-alto span {
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.copertina-alto span:last-child {
+  text-align: right;
+}
+
+/* NUMERI ROMANI */
+
+.copertina-basso span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* RIFINITURA BIOGRAFIA FIGMA */
+
+.biografia {
+  padding: 72px 5.55%;
+  background-color: #f6f4ec;
+}
+
+.biografia-intro {
+  display: grid;
+  grid-template-columns: 35% 1fr;
+  gap: 40px;
+  align-items: start;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #d9d6cd;
+  margin-bottom: 40px;
+}
+
+.biografia h2 {
+  font-size: 48px;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin: 20px 0 0;
+}
+
+.biografia-presentazione {
+  font-size: 23px;
+  line-height: 1.35;
+  margin: 0 0 20px;
+}
+
+.biografia-descrizione {
+  font-size: 15px;
+  color: #777;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.biografia-date {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.data {
+  border-top: none;
+  border-left: 1px solid #d9d6cd;
+  padding: 0 0 0 18px;
+}
+
+.data h3 {
+  color: #d9362e;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 12px;
+}
+
+.data h4 {
+  font-size: 16px;
+  margin: 0 0 14px;
+}
+
+.data p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #777;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .biografia-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .biografia-date {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .biografia h2 {
+    font-size: 34px;
+  }
+}
+
+/* RIFINITURA LE CITTÀ INVISIBILI */
+
+.citta-invisibili {
+  background-color: #234cb2;
+  padding: 80px 5.55%;
+}
+
+.citta-contenuto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.citta-testo h2 {
+  font-size: 56px;
+  letter-spacing: -2px;
+  margin: 0 0 25px;
+}
+
+.citta-testo h3 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 25px;
+}
+
+.citta-testo p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.citta-etichetta {
+  font-size: 11px !important;
+  color: #f4d034;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.citta-dati {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 25px 0;
+  font-family: monospace;
+  font-size: 13px;
+  color: #f4d034;
+}
+
+.citta-pulsante {
+  margin-top: 0;
+}
+
+.citta-immagine img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .citta-contenuto {
+    grid-template-columns: 1fr;
+  }
+
+  .citta-testo h2 {
+    font-size: 38px;
+  }
+}
+
+/* RIFINITURA TRE FILI NELL'IMMAGINARIO */
+
+.temi {
+  background-color: #f6f4ec;
+  padding: 72px 5.55%;
+}
+
+.temi h2 {
+  font-size: 48px;
+  letter-spacing: -2px;
+  margin: 20px 0 40px;
+}
+
+.griglia-temi {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+}
+
+.tema {
+  min-height: 380px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #f6f4ec;
+}
+
+.tema-nero {
+  background-color: #191b1d;
+}
+
+.tema-blu {
+  background-color: #234cb2;
+}
+
+.tema-rosso {
+  background-color: #d9362e;
+}
+
+.numero-tema {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -4px;
+  margin-bottom: 35px;
+}
+
+.tema h3 {
+  font-size: 30px;
+  line-height: 1.15;
+  margin: 0 0 20px;
+}
+
+.tema p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.parole-tema {
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  margin-top: auto;
+  padding-top: 25px;
+}
+
+.frase-temi {
+  color: #777;
+  font-size: 15px;
+  margin: 35px 0 0;
+}
+
+/* VERSIONE TABLET E SMARTPHONE */
+
+@media (max-width: 900px) {
+  .griglia-temi {
+    grid-template-columns: 1fr;
+  }
+
+  .tema {
+    min-height: 300px;
+  }
+}
+
+/* RIFINITURA SEZIONE GIALLA */
+
+.libri-consigliati {
+  background-color: #f4d034;
+  padding: 72px 5.55%;
+  color: #191b1d;
+}
+
+.libri-consigliati h2 {
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin: 20px 0;
+}
+
+.libri-introduzione {
+  font-size: 15px;
+  color: #665b27;
+  margin-bottom: 40px;
+}
+
+.libro {
+  display: grid;
+  grid-template-columns: 80px 1.5fr 2fr 40px;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(25, 27, 29, 0.35);
+}
+
+.numero-libro {
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.libro-titolo p {
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin: 0 0 8px;
+}
+
+.libro-titolo h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.libro-descrizione {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #665b27;
+}
+
+.freccia {
+  font-size: 30px;
+}
+
+@media (max-width: 700px) {
+  .libro {
+    grid-template-columns: 50px 1fr 30px;
+  }
+
+  .libro-descrizione {
+    grid-column: 2 / 4;
+  }
+
+  .libri-consigliati h2 {
+    font-size: 34px;
+  }
+}
